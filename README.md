@@ -1,37 +1,54 @@
-# Joomla + MySQL with Docker (Afeka vLab)
+# Joomla + MySQL via Docker (Afeka vLab Setup)
 
-## Quick Start
+This project allows you to run a Joomla website with MySQL using Docker containers. It's designed for vLab environments where data isn't persistent.
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repo:
 ```bash
-./setup.sh
-# Open http://localhost:8080 and finish Joomla setup:
-# Admin: demoadmin / secretpassword (or per your course sheet)
-# DB: host=mysql user=root pass=my-secret-pw db=joomla
+mkdir -p ~/projects && cd ~/projects
+git clone https://github.com/ofekma12/joomla-project-.git
+cd joomla-project-
 ```
 
-## Backup
+2. Make scripts executable and fix line endings:
+```bash
+chmod +x *.sh
+sed -i 's/\r$//' *.sh
+```
+
+3. Start the site:
+```bash
+./run.sh
+```
+
+Open: [http://localhost:8080](http://localhost:8080)
+
+---
+
+## 💾 After Editing Site (e.g., new articles)
+
+1. Backup:
 ```bash
 ./backup.sh
-# Backups in ~/backups:
-#   joomla-db-YYYYmmdd-HHMMSS.sql
-#   joomla-files-YYYYmmdd-HHMMSS.tar.gz
-# Copy them outside the VM so they don't get wiped:
-cp ~/backups/* /home/devtools/tsclient/C/joomla-backups/
 ```
 
-## Restore (on any machine)
+2. Push to GitHub:
 ```bash
-./setup.sh
-mkdir -p ~/restore
-cp /home/devtools/tsclient/C/joomla-backups/* ~/restore/
-./restore.sh
-# Open http://localhost:8080
+git add backups/*
+git commit -m "Update backup"
+git push
 ```
 
-## Cleanup
+---
+
+## 🔁 For Next Login
+
+Just re-clone the repo and run:
 ```bash
-./cleanup.sh
+./run.sh
 ```
 
-## Notes
-- Requires Docker Engine.
-- Adjust the shared-folder path if your VM maps it differently (e.g. `/run/user/$UID/gvfs/...` or `/mnt/tsclient/...`).
+That's it. Your site and DB will be restored automatically.
