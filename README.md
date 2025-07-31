@@ -41,7 +41,8 @@ git add backups/*
 git commit -m "Update backup"
 git push
 ```
-
+```or ./auto-backup-push.sh
+```
 ---
 
 ## 🔁 For Next Login
