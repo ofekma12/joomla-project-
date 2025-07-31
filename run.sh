@@ -66,4 +66,4 @@ else
   fi
 fi
 
-echo "✅ Done. Open: http://localhost:8080  (or the port you configured)"
+echo "✅ Done. Open: http://localhost:8080/administrator  (or the port you configured)"
