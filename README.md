@@ -37,7 +37,7 @@ Open: [http://localhost:8080](http://localhost:8080)
 
 2. Push to GitHub:
 ```bash
-git add backups/*
+git add .
 git commit -m "Update backup"
 git push
 ```
