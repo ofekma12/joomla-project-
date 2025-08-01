@@ -30,19 +30,26 @@ Open: [http://localhost:8080](http://localhost:8080)
 
 ## 💾 After Editing Site (e.g., new articles)
 
-1. Backup:
+1. set your account for git uploading:
+```bash
+git config --global user.email "(YourEmail)@gmail.com"
+git config --global user.name "(YourUsername)"
+```
+2. Backup:
 ```bash
 ./backup.sh
 ```
-
-2. Push to GitHub:
+or: 
+```bash
+mkdir -p backups
+cp ~/backups/joomla-db-*.sql        backups/joomla-db-backup.sql
+cp ~/backups/joomla-files-*.tar.gz  backups/joomla-files-backup.tar.gz
+```
+3. Push to GitHub:
 ```bash
 git add .
 git commit -m "Update backup"
 git push
-```
-```
-or ./auto-backup-push.sh
 ```
 ---
 
