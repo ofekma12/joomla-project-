@@ -24,7 +24,7 @@ sed -i 's/\r$//' *.sh
 ./run.sh
 ```
 
-Open: [http://localhost:8080](http://localhost:8080)
+Open: [http://localhost:8080/administrator](http://localhost:8080)
 
 ---
 
