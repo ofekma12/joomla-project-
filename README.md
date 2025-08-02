@@ -25,7 +25,20 @@ sed -i 's/\r$//' *.sh
 ```
 
 Open: [http://localhost:8080/administrator](http://localhost:8080)
+login:
+Admin Username:  admin
 
+Admin Password: secretpassword
+
+Email:  demo@example.com
+
+Host: mysql
+
+Username: root
+
+Password: my-secret-pw
+
+Database Name: joomla
 ---
 
 ## 💾 After Editing Site (e.g., new articles)
