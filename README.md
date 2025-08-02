@@ -69,6 +69,9 @@ git commit -m "Update backup"
 git push
 ```
 ---
+the system will ask you for your 
+username: your git name.
+and your password: a token you need to create.
 
 ## 🔁 For Next Login
 
