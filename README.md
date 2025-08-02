@@ -40,7 +40,8 @@ Username: root
 
 Password: my-secret-pw
 
-Database Name: joomla ```
+Database Name: joomla
+```
 ---
 
 ## 💾 After Editing Site (e.g., new articles)
