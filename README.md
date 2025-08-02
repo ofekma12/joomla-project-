@@ -28,7 +28,8 @@ Open: [http://localhost:8080/administrator](http://localhost:8080)
 
 login:  
 
-```Admin Username:  admin
+```
+Admin Username:  admin
 
 Admin Password: secretpassword
 
